@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <style>
+.todo-container {
+  display: flex;
+  align-items: center;       /* Yazı ve buton dikeyde hizalı olur */
+  justify-content: space-between; /* Metin solda, buton sağda durur */
+  background-color: #f8f8f8;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.todo-container p {
+  margin: 0; /* p etiketinin varsayılan boşluklarını kaldırır */
+  font-size: 16px;
+}
+
+button {
+  color: #fff;
+  background-color: #28a745; /* yeşil ton (Bootstrap benzeri) */
+  padding: 8px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #218838; /* hover rengi */
+}
+
+.js-remove-button {
+  background-color: #dc3545; /* kırmızı ton */
+  margin-left: 10px;
+}
+
+.js-remove-button:hover {
+  background-color: #c82333;
+}
+
+.js-error {
+  transition: opacity 0.4s ease;
+}
+
+.empty {
+  text-align: center;
+  color: #6c757d;
+  font-style: italic;
+  margin-top: 1rem;
+}
+.empty small {
+  display: block;
+  font-size: 0.85em;
+  color: #999;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <input type="text" class="js-input" placeholder="Görev ekleyin">
+  <button class="js-add-btn">Ekle</button>
+  <div class="js-error" style="color: red; margin-top: 10px;"></div>
+  <div class="js-output"></div>
+
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
